@@ -1,0 +1,9 @@
+# Cache files
+__pycache__
+.ipynb_checkpoints
+
+# Dataset
+*.csv
+
+# Virtual environment
+myenv
