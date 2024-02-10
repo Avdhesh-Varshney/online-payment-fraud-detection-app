@@ -1,1 +1,166 @@
-# Online-Payments-Fraud-Detection-Model
+<h1 align='center'>💥 Online Payments Fraud Detection Machine Learning Model 💥</h1>
+
+<h3>:zap: GOAL</h3>
+
+- The aim of the project is to analyze and predict whether transactions either **Fraud** and **No Fraud**.
+
+### :zap: **DATASET** 
+
+- https://www.kaggle.com/ealaxi/paysim1
+
+![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+
+
+<div align='center'>
+
+### :zap: **TECH STACK USED**
+
+<a href="https://jupyter.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white" alt="jupyter-notebook" /> </a>
+<a href="https://https://numpy.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="numpy" /> </a>
+<a href="https://pandas.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" /> </a>
+<a href="https://matplotlib.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="matplotlib" /> </a>
+<a href="https://scikit-learn.org/stable/" rel="noreferrer"> <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" /> </a>
+
+</div>
+
+### :zap: **DESCRIPTION**
+
+To analyze the dataset of the Online Payments Fraud Detection Dataset and build and train the model on the basis of different features and variables.
+
+There are 11 features and 6362620 entries in this dataset.
+
+- **`step`**: Maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
+
+- **`type`**: CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
+
+- **`amount`**: Amount of the transaction in local currency.
+
+- **`nameOrig`**: Customer who started the transaction.
+
+- **`oldbalanceOrg`**: Initial balance before the transaction.
+
+- **`newbalanceOrig`**: New balance after the transaction.
+
+- **`nameDest`**: Customer who is the recipient of the transaction.
+
+- **`oldbalanceDest`**: Initial balance recipient before the transaction. Note that there is not information for customers that start with M (Merchants).
+
+- **`newbalanceDest`**: New balance recipient after the transaction. Note that there is not information for customers that start with M (Merchants).
+
+- **`isFraud`**: This is the transactions made by the fraudulent agents inside the simulation. In this specific dataset the fraudulent behavior of the agents aims to profit by taking control or customers accounts and try to empty the funds by transferring to another account and then cashing out of the system.
+
+- **`isFlaggedFraud`**: The business model aims to control massive transfers from one account to another and flags illegal attempts. An illegal attempt in this dataset is an attempt to transfer more than 200.000 in a single transaction.
+
+
+![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+
+
+
+### :zap: **LIBRARIES NEEDED**
+
+1. Pandas
+2. Numpy
+3. Matplotlib
+4. Sklearn
+5. Sci-py
+6. Seaborn
+7. Joblib
+8. Flask
+
+
+### :zap: **HOW TO USE IT**
+
+* Create a virtual environment using `python -m venv myenv`.
+* To activate the virtual environment use `.\myenv\Scripts\activate`.
+* If error occurs, use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.
+* Now, app.py is the flask app code. run the command "pip install -r requirements.txt" to install the required dependencies for the flask app.
+* You may need to install additional libraries for running the jupyter notebooks.
+
+
+### :zap: **WHAT I HAVE DONE**
+
+* Load the dataset which contains 6362620 entries in it and having 11 features in it.
+* Performing EDA on the dataset to get insights of the dataset.
+* Plotting different features graphs correspond to `target` feature.
+* Analyse the dataset by using correlation and plot the bar plot i.e., how much it is related to `target` feature.
+* Reduce the parameters and split the dataset into input and target features.
+* Split the parameters into training and testing sets.
+* Train the different models and get their accuracies and MSE & R2 scores even after tuning the hyper-parameters.
+* Even build a neural network and tune the parameters of their.
+* But Decision Tree Classifier Model gives promising performance on this dataset and classify and fit to the target variable with upto 99.97%.
+* Save the model into `.joblib` extension file and create a front-end for it.
+* Also creating a `requirements.txt` file for the model and website build-up.
+* Create a front-end using **FLASK** framework and create a user-friendly template.
+* Website can takes input and pass to the backend of the model and model will predict and provide the user a best result as of accuracy is around ***99.97%***.
+
+
+
+### :zap: **Visualization and EDA of different attributes**
+
+<img alt="graph" src="/static/images/pie_chart.png" >
+
+<img alt="graph" src="/static/images/target_correlation.png" >
+
+<img alt="heatmap" src="/static/images/correlation_heatmap.png" >
+
+<img alt="graph" src="/static/images/type_feature.png" >
+
+<img alt="graph" src="/static/images/amount_feature.png" >
+
+<img alt="graph" src="/static/images/oldbalanceOrg_feature.png" >
+
+<img alt="graph" src="/static/images/newbalanceOrig_feature.png" >
+
+<img alt="graph" src="/static/images/oldbalanceDest_feature.png" >
+
+<img alt="graph" src="/static/images/newbalanceDest_feature.png" >
+
+<img alt="graph" src="/static/images/isFlaggedFraud_feature.png" >
+
+
+### :zap: **CONCLUSION**
+
+- Decision Tree Classifier models show promising performance with **99.97%** accuracy of the model.
+- Created a user-friendly front-end framework using **FLASK** and integrate it to the model.
+
+#### **Outputs**
+
+<img alt='Fraud' src='/static/images/Fraud.png' >
+
+<img alt='No-Fraud' src='/static/images/No-Fraud.png' >
+
+#### **Working Video**
+
+![video](./static/video/video.gif)
+
+
+![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+
+<div align="center">
+
+### :zap: **PROJECT CREATOR & ADMIN**
+
+  <table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Avdhesh-Varshney">
+        <img src="https://github.com/Avdhesh-Varshney/CPMasterLog/assets/114330097/0b13fac7-e59d-40be-ac14-b76a28174e85" width=185px height=175px />
+      </a></br> 
+      <h4 style="color:red;"><a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a></h4>
+      <a href="https://www.linkedin.com/in/avdhesh-varshney-5314a4233/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a>
+  </tr>
+  </table>
+</div>
+
+
+![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+
+<div align="center">
+  <h3>Show some &nbsp;❤️&nbsp; by &nbsp;🌟&nbsp; this repository!</h3>
+  <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> :)</em>
+</div>
+
+<a href="#top"><img src="https://img.shields.io/badge/-Back%20to%20Top-red?style=for-the-badge" align="right"/></a>
+
