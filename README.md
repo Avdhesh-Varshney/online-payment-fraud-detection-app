@@ -20,6 +20,10 @@
 <a href="https://pandas.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" /> </a>
 <a href="https://matplotlib.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="matplotlib" /> </a>
 <a href="https://scikit-learn.org/stable/" rel="noreferrer"> <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" /> </a>
+<a href="https://flask.palletsprojects.com/en/3.0.x/" rel="noreferrer"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="flask" /> </a>
+<a href="https://www.w3schools.com/html/" rel="noreferrer"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="html5" /> </a>
+<a href="https://www.w3schools.com/css/" rel="noreferrer"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="css3" /> </a>
+<a href="https://console.cloud.google.com/welcome?project=superb-tendril-373416" rel="noreferrer"> <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="google-cloud" /> </a>
 
 </div>
 
@@ -97,25 +101,52 @@ There are 11 features and 6362620 entries in this dataset.
 
 ### :zap: **Visualization and EDA of different attributes**
 
-<img alt="graph" src="/static/images/pie_chart.png" >
+<table align='center'>
+  <tr align='center'>
+    <td align='center'>
+      <img alt="graph" src="/static/images/pie_chart.png" >
+    </td>
+    <td align='center'>
+      <img alt="graph" src="/static/images/target_correlation.png" >
+    </td>
+  </tr>
 
-<img alt="graph" src="/static/images/target_correlation.png" >
+  <tr align='center'>
+    <td align='center'>
+      <img alt="heatmap" src="/static/images/correlation_heatmap.png" >
+    </td>
+    <td align='center'>
+      <img alt="graph" src="/static/images/type_feature.png" >
+    </td>
+  </tr>
 
-<img alt="heatmap" src="/static/images/correlation_heatmap.png" >
+  <tr align='center'>
+    <td align='center'>
+      <img alt="graph" src="/static/images/amount_feature.png" >
+    </td>
+    <td align='center'>
+      <img alt="graph" src="/static/images/oldbalanceOrg_feature.png" >
+    </td>
+  </tr>
 
-<img alt="graph" src="/static/images/type_feature.png" >
+  <tr align='center'>
+    <td align='center'>
+      <img alt="graph" src="/static/images/newbalanceOrig_feature.png" >
+    </td>
+    <td align='center'>
+      <img alt="graph" src="/static/images/oldbalanceDest_feature.png" >
+    </td>
+  </tr>
 
-<img alt="graph" src="/static/images/amount_feature.png" >
-
-<img alt="graph" src="/static/images/oldbalanceOrg_feature.png" >
-
-<img alt="graph" src="/static/images/newbalanceOrig_feature.png" >
-
-<img alt="graph" src="/static/images/oldbalanceDest_feature.png" >
-
-<img alt="graph" src="/static/images/newbalanceDest_feature.png" >
-
-<img alt="graph" src="/static/images/isFlaggedFraud_feature.png" >
+  <tr align='center'>
+    <td align='center'>
+      <img alt="graph" src="/static/images/newbalanceDest_feature.png" >
+    </td>
+    <td align='center'>
+      <img alt="graph" src="/static/images/isFlaggedFraud_feature.png" >
+    </td>
+  </tr>
+</table>
 
 
 ### :zap: **CONCLUSION**
@@ -123,13 +154,21 @@ There are 11 features and 6362620 entries in this dataset.
 - Decision Tree Classifier models show promising performance with **99.97%** accuracy of the model.
 - Created a user-friendly front-end framework using **FLASK** and integrate it to the model.
 
-#### **Outputs**
+#### :zap: **Outputs**
 
-<img alt='Fraud' src='/static/images/Fraud.png' >
+<table align='center'>
+  <tr align='center'>
+    <td align='center'>
+      <img alt='Fraud' src='/static/images/Fraud.png' >
+    </td>
+    <td align='center'>
+      <img alt='No-Fraud' src='/static/images/No-Fraud.png' >
+    </td>
+  </tr>
+</table>
 
-<img alt='No-Fraud' src='/static/images/No-Fraud.png' >
 
-#### **Working Video**
+#### :zap: **Working Video**
 
 ![video](./static/video/video.gif)
 
