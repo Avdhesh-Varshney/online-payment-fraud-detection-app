@@ -79,6 +79,7 @@ There are 11 features and 6362620 entries in this dataset.
 * If error occurs, use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.
 * Now, app.py is the flask app code. run the command "pip install -r requirements.txt" to install the required dependencies for the flask app.
 * You may need to install additional libraries for running the jupyter notebooks.
+* In case need help, Use video reference [link](/static/video/video.mp4)
 
 
 ### :zap: **WHAT I HAVE DONE**
