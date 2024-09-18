@@ -1,51 +1,82 @@
-body {
-  background-color: #f8f9fa;
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  --bodyBG: rgb(33, 37, 41);
+  --lightBodyBG: #444343;
+  --coverBG: #61b0c4;
+  --textColor: #f0f0f0;
 }
 
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #444;
+}
+
+body {
+  background-color: var(--bodyBG);
+  color: var(--textColor);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+a {
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--coverBG);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  text-shadow: 4px 4px 10px #000;
 }
 
 h1 {
-  text-align: center;
-  color: #007bff;
+  font-size: 5rem;
 }
 
-form {
-  margin-top: 20px;
+h2 {
+  font-size: 3rem;
 }
 
-label {
-  font-weight: bold;
-  color: #495057;
+h3 {
+  font-size: 2rem;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 15px 0;
-  box-sizing: border-box;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
+pre {
+  background-color: var(--lightBodyBG);
+  border-radius: 0.5rem;
+  overflow: auto;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-#prediction {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 18px;
-  color: #28a745;
+/* Local Variables */
+.cover-box {
+  background-color: var(--coverBG);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cover-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
