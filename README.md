@@ -1,206 +1,99 @@
-<h1 align='center'>💥 Online Payments Fraud Detection Machine Learning Model 💥</h1>
+# <font color="gold">Online Payments Fraud Detection ML Model</font>
 
-<h3>:zap: GOAL</h3>
+![Fraud Detection](https://img.shields.io/badge/Fraud-Detection-brightgreen?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge)
+![XGBoost](https://img.shields.io/badge/-XGBoost-important?style=for-the-badge)
+![AUC ROC](https://img.shields.io/badge/AUC--ROC-0.9556-blue?style=for-the-badge)
+![License](https://img.shields.io/github/license/Avdhesh-Varshney/online-payment-fraud-detection-app?style=for-the-badge)
 
-- The aim of the project is to analyze and predict whether transactions either **Fraud** and **No Fraud**.
+---
 
-### :zap: **DATASET** 
+## <font color="lavendar">Project Overview</font>
 
-- https://www.kaggle.com/ealaxi/paysim1
+The **Online Payments Fraud Detection** application is designed to predict fraudulent transactions in online payment systems using advanced machine learning techniques. With the growing risk of online payment fraud, this model helps financial institutions and e-commerce platforms identify suspicious transactions in real-time.
 
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+Our solution leverages machine learning models, such as **XGBoost**, to detect fraudulent transactions based on a set of features that describe the transaction details. This project focuses on:
+- **Real-time fraud detection** by integrating machine learning models into the payment processing system.
+- **Interactive interface** for users to input transaction details and receive immediate feedback on transaction validity.
+- **Comprehensive feature engineering** and data reduction techniques to optimize model performance.
 
+---
 
-<div align='center'>
+## <font color="lavendar">Features</font>
 
-### :zap: **TECH STACK USED**
+- **Fraud Detection Model**: Built with XGBoost and tuned using hyperparameter optimization to achieve an <font color="khaki">AUC ROC score of 0.9556</font>.
+- **Feature Reduction**: <font color="khaki">Dimensionality reduction from 394 to 53 features</font> for optimized performance.
+- **Interactive Web Application**: A user-friendly interface built with <font color="lightgreen">Streamlit</font> for real-time fraud prediction.
+- **Scalable**: Suitable for integration into <font color="plum">large-scale</font> online payment platforms.
+- **Visualization Tools**: Displays transaction analysis and prediction results in an intuitive format.
+- **Comprehensive Documentation**: Access detailed documentation about <font color="khaki">what has been done</font> through the links provided below.
 
-<a href="https://jupyter.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white" alt="jupyter-notebook" /> </a>
-<a href="https://https://numpy.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="numpy" /> </a>
-<a href="https://pandas.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" /> </a>
-<a href="https://matplotlib.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="matplotlib" /> </a>
-<a href="https://scikit-learn.org/stable/" rel="noreferrer"> <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" /> </a>
-<a href="https://flask.palletsprojects.com/en/3.0.x/" rel="noreferrer"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="flask" /> </a>
-<a href="https://www.w3schools.com/html/" rel="noreferrer"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="html5" /> </a>
-<a href="https://www.w3schools.com/css/" rel="noreferrer"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="css3" /> </a>
-<a href="https://console.cloud.google.com/welcome?project=superb-tendril-373416" rel="noreferrer"> <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="google-cloud" /> </a>
+---
 
-</div>
+## <font color="lavendar">Usage</font>
 
-### :zap: **DESCRIPTION**
+1. Open the web app by running the command below.
+   > <font color="red">https://online-payment-fraud-detector.streamlit.app/</font>
 
-To analyze the dataset of the Online Payments Fraud Detection Dataset and build and train the model on the basis of different features and variables.
+2. Enter transaction details like:
+   - Transaction amount
+   - Transaction ID
+   - Device Type
+   - Card Type (Visa/ discover/ american express/ mastercard)
+   - Transaction type (debit/credit)
+3. Click the **Predict** button to determine if the transaction is fraudulent.
+4. View the prediction result (fraudulent or genuine).
 
-There are 11 features and 6362620 entries in this dataset.
+---
 
-- **`step`**: Maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
+## <font color="lavendar">Model Pipeline</font>
 
-- **`type`**: CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
+The machine learning pipeline for this project consists of the following steps:
 
-- **`amount`**: Amount of the transaction in local currency.
+1. **Data Preprocessing**: Handling missing values, scaling, and encoding categorical features.
+2. **Feature Engineering**: Reducing the dataset from 394 features to 53 using techniques like PCA and feature importance.
+3. **Model Training**: Using **XGBoost** with hyperparameter tuning for optimal performance.
+4. **Model Evaluation**: Evaluating the model based on metrics such as AUC ROC and accuracy.
+5. **Prediction**: Real-time predictions using the trained model.
 
-- **`nameOrig`**: Customer who started the transaction.
+> <font color="purple">**NOTE:**</font> To dive deeper into the technical details, model architecture, or other functionalities, visit the following sections:
+> > <font color="seagreen">**NOTEBOOK LINK:**</font> https://www.kaggle.com/code/avdhesh15/fraud-detection-model <br />
+> > <font color="seagreen">**WEBSITE LINK:**</font> https://avdhesh-varshney.github.io/online-payment-fraud-detection-app/
 
-- **`oldbalanceOrg`**: Initial balance before the transaction.
+---
 
-- **`newbalanceOrig`**: New balance after the transaction.
+## <font color="lavendar">Evaluation Metrics</font>
 
-- **`nameDest`**: Customer who is the recipient of the transaction.
+The model was evaluated on the **IEEE-CIS Fraud Detection Dataset** using the following metrics:
+- <font color="plum">**1 CV Score**</font>: 0.9562
+- <font color="plum">**2 CV Score**</font>: 0.952
+- <font color="plum">**3 CV Score**</font>: 0.9586
+- <font color="lavendar">**Mean AUC ROC**</font>: 0.9556
 
-- **`oldbalanceDest`**: Initial balance recipient before the transaction. Note that there is not information for customers that start with M (Merchants).
+These metrics ensure a reliable detection of fraudulent transactions, minimizing both false positives and false negatives.
 
-- **`newbalanceDest`**: New balance recipient after the transaction. Note that there is not information for customers that start with M (Merchants).
+---
 
-- **`isFraud`**: This is the transactions made by the fraudulent agents inside the simulation. In this specific dataset the fraudulent behavior of the agents aims to profit by taking control or customers accounts and try to empty the funds by transferring to another account and then cashing out of the system.
+## <font color="lavendar">Dataset</font>
 
-- **`isFlaggedFraud`**: The business model aims to control massive transfers from one account to another and flags illegal attempts. An illegal attempt in this dataset is an attempt to transfer more than 200.000 in a single transaction.
+This project uses the <font color="gold">**IEEE-CIS Fraud Detection Dataset**</font>, which contains anonymized transaction data. The dataset includes a wide range of features that describe each transaction, such as transaction amount, device information, and transaction type.
 
+- **Training Data**: Used for model training and validation.
+- **Testing Data**: Used to evaluate the final model.
 
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+---
 
+## <font color="lavendar">Technologies Used</font>
 
-
-### :zap: **LIBRARIES NEEDED**
-
-1. Pandas
-2. Numpy
-3. Matplotlib
-4. Sklearn
-5. Sci-py
-6. Seaborn
-7. Joblib
-8. Flask
-
-
-### :zap: **HOW TO USE IT**
-
-* Create a virtual environment using `python -m venv myenv`.
-* To activate the virtual environment use `.\myenv\Scripts\activate`.
-* If error occurs, use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.
-* Now, app.py is the flask app code. run the command "pip install -r requirements.txt" to install the required dependencies for the flask app.
-* You may need to install additional libraries for running the jupyter notebooks.
-* In case need help, Use video reference [link](/static/video/video.mp4)
-
-
-### :zap: **WHAT I HAVE DONE**
-
-* Load the dataset which contains 6362620 entries in it and having 11 features in it.
-* Performing EDA on the dataset to get insights of the dataset.
-* Plotting different features graphs correspond to `target` feature.
-* Analyse the dataset by using correlation and plot the bar plot i.e., how much it is related to `target` feature.
-* Reduce the parameters and split the dataset into input and target features.
-* Split the parameters into training and testing sets.
-* Train the different models and get their accuracies and MSE & R2 scores even after tuning the hyper-parameters.
-* Even build a neural network and tune the parameters of their.
-* But Decision Tree Classifier Model gives promising performance on this dataset and classify and fit to the target variable with upto 99.97%.
-* Save the model into `.joblib` extension file and create a front-end for it.
-* Also creating a `requirements.txt` file for the model and website build-up.
-* Create a front-end using **FLASK** framework and create a user-friendly template.
-* Website can takes input and pass to the backend of the model and model will predict and provide the user a best result as of accuracy is around ***99.97%***.
-
-
-
-### :zap: **Visualization and EDA of different attributes**
-
-<table align='center'>
-  <tr align='center'>
-    <td align='center'>
-      <img alt="graph" src="/static/images/pie_chart.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/target_correlation.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>
-      <img alt="heatmap" src="/static/images/correlation_heatmap.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/type_feature.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>
-      <img alt="graph" src="/static/images/amount_feature.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/oldbalanceOrg_feature.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>
-      <img alt="graph" src="/static/images/newbalanceOrig_feature.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/oldbalanceDest_feature.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>
-      <img alt="graph" src="/static/images/newbalanceDest_feature.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/isFlaggedFraud_feature.png" >
-    </td>
-  </tr>
-</table>
-
-
-### :zap: **CONCLUSION**
-
-- Decision Tree Classifier models show promising performance with **99.97%** accuracy of the model.
-- Created a user-friendly front-end framework using **FLASK** and integrate it to the model.
-
-#### :zap: **Outputs**
-
-<table align='center'>
-  <tr align='center'>
-    <td align='center'>
-      <img alt='Fraud' src='/static/images/Fraud.png' >
-    </td>
-    <td align='center'>
-      <img alt='No-Fraud' src='/static/images/No-Fraud.png' >
-    </td>
-  </tr>
-</table>
-
-
-#### :zap: **Working Video**
-
-![video](./static/video/video.gif)
-
-
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
-
-<div align="center">
-
-### :zap: **PROJECT CREATOR & ADMIN**
-
-  <table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Avdhesh-Varshney">
-        <img src="https://github.com/Avdhesh-Varshney/CPMasterLog/assets/114330097/0b13fac7-e59d-40be-ac14-b76a28174e85" width=185px height=175px />
-      </a></br> 
-      <h4 style="color:red;"><a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a></h4>
-      <a href="https://www.linkedin.com/in/avdhesh-varshney-5314a4233/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-      </a>
-  </tr>
-  </table>
-</div>
-
-
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+- <font color="yellow">**Python 3.8+**</font>
+- <font color="skyblue">**XGBoost**</font>: The primary machine learning model used for prediction.
+- <font color="lightgreen">**Streamlit**</font>: For building the web interface and API.
+- <font color="coral">**Pandas, NumPy**</font>: For data manipulation and preprocessing.
+- <font color="salmon">**Scikit-learn**</font>: For preprocessing and model evaluation.
+- <font color="violet">**Matplotlib, Seaborn**</font>: For visualizations and feature analysis.
 
 <div align="center">
   <h3>Show some &nbsp;❤️&nbsp; by &nbsp;🌟&nbsp; this repository!</h3>
-  <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> :)</em>
 </div>
 
 <a href="#top"><img src="https://img.shields.io/badge/-Back%20to%20Top-red?style=for-the-badge" align="right"/></a>
-
