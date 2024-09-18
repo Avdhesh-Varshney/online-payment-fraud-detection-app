@@ -2,8 +2,12 @@
 __pycache__
 .ipynb_checkpoints
 
-# Dataset
+# secret files
 *.csv
+*.pkl
+*.joblib
+*.toml
+*.streamlit
 
 # Virtual environment
 myenv
