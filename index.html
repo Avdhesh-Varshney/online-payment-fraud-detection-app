@@ -3,130 +3,736 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Payment Fraud Detection Application</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="./static/css/style.css">
   <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Online Payment Fraud Detection Application</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/contacts/contact-4/assets/css/contact-4.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link rel="stylesheet" href="./static/css/style.css">
+
 </head>
 
 <body>
-  <div class="container d-flex flex-column gap-5 my-5">
-    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center gap-3 p-4 cover-box">
-      <h1 class="mb-3 mb-md-0 display-3 display-md-4">Online Payment Fraud Detection Application</h1>
-      <img src="static/images/others/cover-img.png" alt="" class="img-fluid" style="max-width: 100%; height: auto; width: auto; max-height: 300px;">
-    </div>
-
-    <div class="d-flex flex-column gap-3">
-      <h2>Welcome to Fraud Detection Application!</h2>
-      <p class="text-sm" style="text-align: justify;">
-        <b>Fraud prevention in online transactions is critical.</b> This web application helps users detect fraudulent activities in online payment transactions using advanced machine learning models. With an intuitive interface, users can input transaction details and quickly receive predictions about the likelihood of fraud. Whether you're an individual user or a financial professional, this tool provides an easy and effective way to assess transaction risks.
-      </p>
-
-      <div class="d-flex flex-column justify-content-center gap-5">
-        <div class="d-flex flex-column flex-md-row justify-content-evenly gap-5">
-          <img src="static/images/others/img.jpg" width="2500px" alt="" style="border: 5px solid #444;" />
-          <div>
-            <h3>About the Application</h3>
-            <p class="text-sm" style="text-align: justify;">
-              The <b>Online Payment Fraud Detection Application</b> leverages cutting-edge machine learning techniques, including Principal Component Analysis (PCA) and XGBoost, to offer accurate fraud predictions. By reducing the number of input features through dimensionality reduction, the application provides a streamlined user experience without compromising accuracy.
-            </p>
-            <p><b>Key Highlights:</b></p>
-            <ul>
-              <li>Streamlined User Experience</li>
-              <li>Real-Time Predictions</li>
-              <li>Comprehensive Data Handling</li>
-            </ul>
-            <a href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html">
-              <button class="btn btn-primary">Learn More</button>
-            </a>
-          </div>
-        </div>
-  
-        <div class="d-flex flex-column flex-md-row justify-content-evenly gap-5">
-          <img src="static/images/notebook/notebook.png" width="2100px" alt="" style="border: 5px solid #444;" />
-          <div class="text-start">
-            <h3>Model Building</h3>
-            <p class="text-sm" style="text-align: justify;">
-              Our machine learning models are built using the <b>IEEE-CIS Fraud Detection dataset</b>, ensuring a robust foundation for detecting fraudulent transactions. On the model-building page, you'll find detailed insights into how the models were trained, the features used, and how they contribute to the predictions.
-            </p>
-            <p><b>Highlights:</b></p>
-            <ul>
-              <li>Dimensionality Reduction</li>
-              <li>XGBoost Model</li>
-              <li>Clustering for Behavior Analysis</li>
-            </ul>
-            <a href="https://www.kaggle.com/code/avdhesh15/fraud-detection-model">
-              <button class="btn btn-primary">Learn More</button>
-            </a>
-          </div>
-        </div>
-  
-        <div class="d-flex flex-column flex-md-row justify-content-evenly gap-5">
-          <img src="static/images/streamlit_app.jpeg" width="800px" alt="" style="border: 5px solid #444;" />
-          <div>
-            <h3>How to Use the Application</h3>
-            <p class="text-sm" style="text-align: justify;">Ready to detect fraud? Simply enter the following details:</p>
-            <ol>
-              <li>Transaction type</li>
-              <li>Amount of the transaction</li>
-              <li>Old balance and new balance</li>
-            </ol>
-            <p class="text-sm" style="text-align: justify;">
-              Click the "<b>Start Application</b>" button, and the model will provide a prediction of whether the transaction is fraudulent.
-            </p>
-            <a href="https://online-payment-fraud-detector.streamlit.app/">
-              <button class="btn btn-primary">Start Application</button>
-            </a>
-          </div>
-        </div>
+  <div class="main-container">
+    <div class="aside">
+      <div class="logo">
+        <a href="/">
+          <img src="./static/favicon.png" alt="">
+          <span>F</span>raud
+        </a>
       </div>
+      <div class="nav-toggler"><span></span></div>
+      <ul class="nav">
+        <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="#about"><i class="fa fa-address-card"></i>About Application</a></li>
+        <li><a href="#journey"><i class="fa-solid fa-user-graduate"></i>Learning Journey</a></li>
+        <li><a href="#model"><i class="fa-solid fa-medal"></i>Model Building</a></li>
+        <li><a href="#app"><i class="fa fa-list-check"></i>Interactive App</a></li>
+        <li><a href="#resources"><i class="fa-solid fa-certificate"></i></i>Technical Resources</a></li>
+        <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
+      </ul>
     </div>
   </div>
 
-  <footer
-    class="footer footer-dark p-4 shadow-lg d-flex flex-column flex-md-row align-items-center justify-content-evenly text-center bg-dark text-white">
-    <div class="w-50 text-light mb-3 mb-md-0">
-      <h3 class="text-xl mb-3">Online Payment Fraud Detection Application 🔍</h3>
-      <p class="text-sm">
-        The Online Payment Fraud Detection Application is a web app that detects fraud in online payment transactions.
-        It uses machine learning models to predict whether a transaction is fraudulent or genuine. The app is built
-        using Flask and a Python web framework. The app is accessible via a web browser and provides a user-friendly
-        interface for users to input transaction details and view the prediction results.
-      </p>
-    </div>
-
-    <div class="text-light text-center">
-      <h3 class="text-xl mb-3">Connect with me</h3>
-      <div class="d-flex justify-content-around mb-2">
-        <a class="text-white mx-2" href="https://discord.gg/tSqtvHUJzE">
-          <i class="fab fa-discord" style="width: 25px; height: 25px;"></i>
-        </a>
-        <a class="text-white mx-2" href="https://www.linkedin.com/in/avdhesh-varshney/">
-          <i class="fab fa-linkedin" style="width: 25px; height: 25px;"></i>
-        </a>
-        <a class="text-white mx-2" href="https://x.com/__Avdhesh__">
-          <i class="fab fa-twitter" style="width: 25px; height: 25px;"></i>
-        </a>
-        <a class="text-white mx-2" href="https://www.youtube.com/@Code_A2Z">
-          <i class="fab fa-youtube" style="width: 25px; height: 25px;"></i>
-        </a>
-        <a class="text-white mx-2" href="https://github.com/Avdhesh-Varshney">
-          <i class="fab fa-github" style="width: 25px; height: 25px;"></i>
-        </a>
+  <div class="main-content">
+    <!-- Front Page section starts -->
+    <section class="home active section" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="home-info padd-15">
+            <h3 class="hello">Welcome to <span class="name">Online Payment Fraud Detection Application</span></h3>
+            <h3 class="my-profession">Fraud Detection Redefined: <br /> <span class="typing">.</span></h3>
+            <p style="text-align: justify;">
+              Dive into a groundbreaking exploration of fraud detection, where technology meets real-world application.
+              Over two months of in-depth research and development have culminated in a robust system that tackles fraud
+              across diverse domains.
+            </p>
+            <a href="https://online-payment-fraud-detector.streamlit.app/" class="btn btn-primary">Run Application</a>
+          </div>
+          <div class="home-img">
+            <a href="https://online-payment-fraud-detector.streamlit.app/">
+              <img src="static/images/others/cover-img.png" alt="" />
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
+    <!-- Front Page section ends -->
 
-      <p class="text-sm mb-0">© 2024 All Rights Reserved</p>
-      <b class="text-sm">Made By Avdhesh Varshney 👦</b>
-    </div>
+    <!-- About section starts -->
+    <section class="service section" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2>About Application</h2>
+          </div>
+        </div>
 
-  </footer>
+        <div class="row">
+          <div class="about-text padd-15">
+            <h3><span>Fraud prevention in online transactions is critical.</span></h3>
+            <p>
+              This web application helps users detect fraudulent activities in online payment
+              transactions using advanced machine learning models. With an intuitive interface,
+              users can input transaction details and quickly receive predictions about the likelihood
+              of fraud. Whether you're an individual user or a financial professional, this tool provides
+              an easy and effective way to assess transaction risks.
+            </p>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="service-item padd-15">
+            <div class="service-item-inner card" style="width: 33rem;">
+              <img src="static/images/others/img.jpg" alt="Fraud Detection" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Fraud Detection Redefined</h5>
+                <p class="card-text" style="text-align: justify;">
+                  The <b>Online Payment Fraud Detection Application</b> leverages cutting-edge machine learning
+                  techniques, including Principal Component Analysis (PCA) and XGBoost, to offer accurate fraud
+                  predictions. By reducing the number of input features through dimensionality reduction, the
+                  application provides a streamlined user experience without compromising accuracy.
+                </p>
+                <div class="button padd-15">
+                  <a href="#journey" data-section-index="1" class="journey btn btn-primary">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-item padd-15">
+            <div class="service-item-inner card" style="width: 33rem;">
+              <img src="static/images/notebook/notebook.png" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Model Building</h5>
+                <p class="card-text" style="text-align: justify;">
+                  Our machine learning models are built using the <b>IEEE-CIS Fraud Detection dataset</b>, ensuring
+                  a
+                  robust foundation for detecting fraudulent transactions. On the model-building page, you'll find
+                  detailed insights into how the models were trained, the features used, and how they contribute to
+                  the
+                  predictions.
+                </p>
+                <div class="button padd-15">
+                  <a href="#model" data-section-index="1" class="model btn btn-primary">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-item padd-15">
+            <div class="service-item-inner">
+              <img src="static/images/streamlit_app.jpeg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">How to Use the Application</h5>
+                <p class="card-text" style="text-align: justify;">Ready to detect fraud? Simply enter the following
+                  details:
+                </p>
+                <p class="card-text" style="text-align: justify;">
+                  Click the "<b>Start Application</b>" button, and the model will provide a prediction of whether the
+                  transaction is fraudulent.
+                </p>
+                <div class="button padd-15">
+                  <a href="#app" data-section-index="1" class="app btn btn-primary">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-item padd-15">
+            <div class="service-item-inner">
+              <img src="static/images/others/medium.png" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">Technical Resources</h5>
+                <p class="card-text" style="text-align: justify;">
+                  Explore additional resources, including the <b>Fraud Detection Handbook</b>, a Kaggle notebook, and
+                  the IEEE-CIS dataset. These resources provide valuable insights into fraud detection techniques and
+                  best practices.
+                </p>
+                <div class="button padd-15">
+                  <a href="#resources" data-section-index="1" class="resources btn btn-primary">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- About section ends -->
+
+    <!-- Journey section starts -->
+    <section class="service section" id="journey">
+      <div class="container">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2>Learning Journey</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div style="background-color: #e7e4e4;" class="py-4 padd-15 rounded">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="/static/images/journey/nilson_report.jpeg" alt="" />
+              </div>
+              <div class="col-md-6">
+                <p style="color: black;">
+                  <b>Nilson Report</b> is the most trusted source of news and analysis for the card and mobile payment
+                  industry.
+                  <a
+                    href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_References/bibliography.html#id3">
+                    The latest Nilson Report
+                  </a>
+                  from 2019 reveals that global card fraud losses reached $28.65 billion.
+                  <b>Card fraud losses</b> are projected to reach <b>$35.31</b> billion by 2025, highlighting the urgent
+                  need for
+                  advanced fraud detection systems.
+                </p>
+                <p style="color: black;">
+                  <b>Online payment fraud</b> is a growing concern for businesses and consumers alike. As e-commerce
+                  continues to
+                  expand, fraudsters are finding new ways to exploit vulnerabilities in online transactions.
+                </p>
+                <hr />
+                <p style="color: black;">
+                  <b>European Central Bank</b> (ECB) data shows that card fraud losses in the Single Euro Payments Area
+                  (SEPA)
+                  reached €1.55 billion in 2019.
+                  <a
+                    href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_References/bibliography.html#id2">
+                    The <b>ECB</b>
+                  </a>
+                  has been working to enhance payment security through the
+                  implementation of the <b>Revised Payment Services Directive (PSD2)</b>.
+                </p>
+                <p style="color: black;">
+                  The <b>PSD2</b> aims to improve the security of online payments and protect consumers from fraud. By
+                  requiring strong customer authentication for electronic transactions, the directive seeks to reduce
+                  the
+                  risk of fraud and enhance the overall security of the payment ecosystem.
+                </p>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-md-6">
+                <img src="/static/images/journey/european_bank.png" alt="" />
+              </div>
+              <div class="col-md-6">
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row py-4">
+            <h4>❄️ <span>Well Known PIN Codes</span> | Advanced Techniques (Biometric identification).</h4>
+            <p>
+              <b>Purpose:</b>
+            </p>
+            <p>1. Automated systems should optimize the workload of fraud investigators.</p>
+            <p>2. Automated systems and human investigators work at different time scales:</p>
+            <div style="margin-left: 20px;">
+              <p>a. While automated systems usually provide risk scores for transactions in less than a second.</p>
+              <p>b. Fraud investigators usually require contacting a client to confirm a fraud, which can take days or
+                weeks.</p>
+            </div>
+          </div>
+          <hr />
+
+          <div>
+            <h4>
+              <a
+                href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_2_Background/CreditCardFraud.html">
+                <i class="fa-solid fa-asterisk"></i>
+              </a>
+              Scenarios
+            </h4>
+            <div class="row padd-15 rounded" style="background-color: #e7e4e4;">
+              <img src="/static/images/journey/scenarios.png" alt="">
+            </div>
+            <p>
+              CP Scenarios have become existed for more than 2 decades and robust to fraud attacks. Notably to
+              <b>EMV</b>(Europay Mastercard & Visa) technology.
+            </p>
+          </div>
+          <hr />
+
+          <div>
+            <h4>
+              <a
+                href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_2_Background/FDS.html">
+                <i class="fa-solid fa-asterisk"></i>
+              </a>
+              Layer Diagram
+            </h4>
+            <div class="row padd-15 rounded" style="background-color: #e7e4e4;">
+              <img src="/static/images/journey/layer_control_diagram.png" alt="">
+              <hr />
+              <img src="/static/images/journey/layer_diagram.png" alt="">
+            </div>
+            <p>
+              Investigators design transaction-blocking & scoring rules layers.
+            <div style="margin-left: 20px;">
+              <p>1. Check few alerts/day as the process is long & tedious.</p>
+              <p>2. Investigate the wrong/false alarms raised by DDM and reported back to real-time FDS.</p>
+              <p>3. High score of DDM for fraud will be pass the Investigators layers and contact/sent alert using SMS.
+              </p>
+            </div>
+            </p>
+          </div>
+          <hr />
+
+          <div>
+            <h4>
+              <a
+                href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_3_GettingStarted/SimulatedDataset.html">
+                <i class="fa-solid fa-asterisk"></i>
+              </a>
+              Variation in Transaction Data
+            </h4>
+            <div style="background-color: #e7e4e4;" class="row padd-15 rounded">
+              <img src="/static/images/journey/transaction_data.png" alt="">
+            </div>
+          </div>
+          <hr />
+
+          <a href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html"
+            class="btn btn-primary">
+            The Fraud Detection Handbook
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Journey section ends -->
+
+    <!-- Model section starts -->
+    <section class="service section" id="model">
+      <div class="container">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2>Model Building</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="/static/images/model/challenges.png" alt="">
+          <hr />
+
+          <div>
+            <h4>Transaction Dataset Building</h4>
+            <div style="background-color: #e7e4e4;" class="row padd-15 rounded">
+              <img src="/static/images/model/data_gen.png" alt="">
+            </div>
+            <p>Generate a dataset having, 5,000 customers, 10,000 terminals and 183 days of transactions.</p>
+            <p>1,754,155 transactions will generated in processing time about 3 minutes.</p>
+          </div>
+          <hr />
+
+          <div>
+            <h4>Addition of Fraud Scenarios</h4>
+            <div class="py-4 rounded">
+              <img src="/static/images/model/fraud_scenario.jpg" alt="" class="rounded" />
+            </div>
+            <p><b>Note:</b> Adding fraudulent scenarios about 14,681 Transactions. The ratio of fraudulent and
+              non-fraudulent is 0.8% of all the Transactions.</p>
+            <p>This generated dataset shows around <b>10,000</b> Transaction per day. The number of fraudulent
+              transaction per day is around <b>85</b>, which is a significant figure.</p>
+          </div>
+          <hr />
+
+          <div>
+            <h4>Feature Engineering</h4>
+            <p>From date & time features, generating some more features and scenarios as shown below,</p>
+            <div style="margin-left: 20px;">
+              <p>1. Weekdays</p>
+              <p>2. Weekends</p>
+              <p>3. Day</p>
+              <p>4. Night</p>
+            </div>
+            <p>Transforming customer ID to characterize the customer behaviour.</p>
+            <div style="margin-left: 20px;">
+              <p>1. RFM (Recency, Frequency, Monetary) value.</p>
+              <p>2. Keep track of average spending amount & No. of transactions.</p>
+              <p>3. Creating 6 new features based on their behaviours on working days, non-working days, vacations, &
+                tours, etc.</p>
+            </div>
+            <p>Method used for transaction</p>
+            <div style="margin-left: 20px;">
+              <p>1. Using cards</p>
+              <div style="margin-left: 40px;">
+                <p>a. Lost cards</p>
+                <p>b. Skimming the cards</p>
+                <p>c. Ordered a new card on wrong address</p>
+              </div>
+              <p>2. Without using cards</p>
+              <div style="margin-left: 40px;">
+                <p>a. Using Mobile/laptop and their versions</p>
+                <p>b. Using Net-banking / UPI / third-party apps</p>
+                <p>c. Lost of UPI PIN</p>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div>
+            <h4>Choosing the IEEE-CIS Dataset</h4>
+            <p>
+              IEEE-CIS Fraud Detection dataset is a large-scale dataset that contains transaction data from an
+              e-commerce platform. The dataset includes a wide range of features, such as transaction amount, product
+              category, and customer information. This meets the criteria for building a robust fraud detection model
+              and merging the generated dataset with the <b>REAL WORLD</b> dataset.
+            </p>
+            <p>This dataset contains 590,540 transaction details of 393 different features in training dataset.</p>
+          </div>
+          <hr />
+
+          <div>
+            <h4>Working on the dataset</h4>
+            <p>After compiling the generated and IEEE-CIS dataset. There are many challenges for building the fraud
+              detection model. Because,</p>
+            <div style="margin-left: 20px;">
+              <p>1. Imbalance dataset between fraud and non-fraud dataset.</p>
+              <p>2. Deal with huge number of features.</p>
+              <p>3. Selection of correct and most important feature.</p>
+              <p>4. Handling missing values.</p>
+              <p>5. Scaling the features.</p>
+            </div>
+            <div style="background-color: #e7e4e4;" class="row padd-15 rounded">
+              <img src="/static/images/model/model_flowchart.png" alt="">
+            </div>
+          </div>
+          <hr />
+
+          <a href="https://www.kaggle.com/code/avdhesh15/fraud-detection-model" class="btn btn-primary">
+            Read Kaggle Notebook
+          </a>
+        </div>
+    </section>
+    <!-- Model section ends -->
+
+    <!-- App section starts -->
+    <section class="service section" id="app">
+      <div class="container">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2>Interactive App</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <h4>Building the application using streamlit</h4>
+            <p><b>Integration of google drive files with streamlit application</b></p>
+            <pre>
+              <code>
+@st.cache_resource
+def downloadFiles():
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['LABELS']}", f'labels.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['KM_C_FEATURES']}", f'km_C_features.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['KM_D_FEATURES']}", f'km_D_features.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['KM_V_FEATURES']}", f'km_V_features.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['PCA_C_FEATURES']}", f'PCA_C_features.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['PCA_D_FEATURES']}", f'PCA_D_features.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['PCA_V_FEATURES']}", f'PCA_V_features.pkl', quiet=False)
+  gdown.download(f"https://drive.google.com/uc?id={st.secrets['MODEL']}", f'model.pkl', quiet=False)
+              </code>
+            </pre>
+
+            <p><b>Application main code</b></p>
+            <pre>
+              <code>
+def app():
+  st.write("This is a simple web app to predict whether a transaction is fraudulent or not.")  
+  st.write("Please provide the necessary details to classify the transaction.")
+  
+  # Load labels from file
+  with open('labels.pkl', 'rb') as f:
+    labels = pickle.load(f)
+
+  # Details of the User 
+  name, age, phone_no, my_address_data, my_address, corr_address_data, corr_address = userDetails()
+
+  # Details of the Transaction 
+  (TransactionDT, TransactionID, TransactionAmt, mean_last, min_last, max_last, std_last, dist1, _Weekdays, _Days, _Hours, ProductCD,
+    purchaser_email, P_emaildomain, recipient_email, R_emaildomain, tx_phone_no, tx_address_data, tx_address, addr1, addr2,
+    first_value_addr1) = transactionDetails(labels, my_address_data, my_address)
+
+  # Details of the Card 
+  (card_data, Card_ID, first_value_card1, card_holder_name, TransactionAmt_to_mean_card_id, TransactionAmt_to_mean_card1,
+    TransactionAmt_to_mean_card4) = cardDetails(labels, TransactionAmt)
+
+  # Details of the Billing 
+  M_data = billingDetails(purchaser_email, card_holder_name, name, phone_no, tx_phone_no, my_address, tx_address,
+                          my_address_data['Country'], tx_address_data['Country'])
+
+  # Details of the Behavior
+  V_data, C_data, D_data = behavioralDetails(TransactionAmt, min_last, max_last, _Hours, my_address_data, tx_address_data)
+
+  # Details of the Device
+  device_data = deviceInfo(labels)
+
+  if st.button("Predict"):
+    data = {
+      "Name": name, "Age": age, "Phone Number": phone_no, "My Address Data": my_address_data, "Address": my_address, 
+      "Correspondence Address Data": corr_address_data, "Correspondence Address": corr_address, "Transaction Date": TransactionDT, 
+      "Transaction ID": TransactionID, "Transaction Amount": TransactionAmt, "Mean Transaction Amount": mean_last, 
+      "Minimum Transaction Amount": min_last, "Maximum Transaction Amount": max_last, "Standard Deviation Transaction Amount": std_last, 
+      "Distance": dist1, "Weekdays": _Weekdays, "Days": _Days, "Hours": _Hours, "ProductCD": ProductCD, 
+      "Purchaser Email": purchaser_email, "Purchaser Email Domain": P_emaildomain, "Recipient Email": recipient_email, 
+      "Recipient Email Domain": R_emaildomain, "Transaction Phone Number": tx_phone_no, "Transaction Address Data": tx_address_data, 
+      "Transaction Address": tx_address, "Address 1": addr1, "Address 2": addr2, "First Value Address 1": first_value_addr1, 
+      "Card Data": card_data, "Card ID": Card_ID, "First Value Card1": first_value_card1, "Card Holder Name": card_holder_name, 
+      "Transaction Amount with Card ID": TransactionAmt_to_mean_card_id, "Transaction Amount with Card1": TransactionAmt_to_mean_card1, 
+      "Transaction Amount with Card4": TransactionAmt_to_mean_card4, "Billing Data": M_data, "Behavioral Data": V_data, 
+      "Transactional Usage Data": C_data, "Transaction Time Behavioral Data": D_data, "Device Data": device_data
+    }
+
+    st.toast("Pre-processing has started...", icon="⏳")
+    with st.spinner('Model is processing...'):
+      progress_bar = st.progress(0)
+      for percent_complete in range(100):
+        time.sleep(0.03)
+        progress_bar.progress(percent_complete + 1)
+    
+    data = preprocessing(data)
+    st.toast("Pre-processing is complete...", icon="✅")
+    time.sleep(1)
+
+    results = st.container()
+    with results:
+      st.subheader("Results")
+      st.toast("Model is working now...", icon="⏳")
+      with st.spinner('Model is processing...'):
+        progress_bar = st.progress(0)
+        for percent_complete in range(100):
+          time.sleep(0.03)
+          progress_bar.progress(percent_complete + 1)
+      st.toast("Prediction is complete...", icon="✅")
+      try:
+        prediction = predict(data)
+        st.write(f'Hello {name}!')
+        st.write('Based on the machine learning model, the risk of this transaction being fraudulent is:')
+        if prediction[:,1] >= 0.5:
+          st.error("**HIGH**", icon="🚫")
+          st.toast("The transaction is classified as fraudulent.", icon="🚫")
+        else:
+          st.success("**LOW**", icon="✅")
+          st.toast("The transaction is classified as non-fraudulent.", icon="🎉")
+        
+        st.warning('Disclaimer: **The results from this test are not intended for any financial or legal advice.** \
+                  The model was trained on 590,540 data points with personal attributes only. Additionally, the analysis of \
+                  this model indicates that attributes such as the transaction amount, maximum and minimum transaction limits, \
+                  and the distance of the transaction location are of high importance in determining if a transaction is fraudulent or not.', icon="⚠️")
+        
+        st.info('Accuracy: The machine learning model used for prediction was initially evaluated on an unknown dataset \
+                consisting of 506,691 records. The model correctly classified 89.54% of transactions as fraudulent and \
+                88.66% of transactions as non-fraudulent. The model has an AUC-ROC score of 0.94. It also considers the cost of \
+                misclassifying a non-fraudulent transaction as fraudulent, which is why the model is more likely to classify a transaction \
+                as non-fraudulent rather than fraudulent.', icon="ℹ️")
+        
+        details = st.expander("More Details", expanded=False)
+        with details:
+          st.write('According to the ML model:')
+          st.write('The probability of the transaction being classified as fraudulent is:')
+          st.error(f'**{prediction[:,1][0]:.2%}**')
+          st.write('The probability of the transaction being classified as non-fraudulent is:')
+          st.success(f'**{prediction[:,0][0]:.2%}**')
+          st.write('**Note:** If the probability of classifying the transaction as fraudulent is over 0.5, then the model will classify it as a fraudulent transaction.')
+      
+      except:
+        st.error("Enter valid values to show the results.", icon="🚨")
+        st.toast("Oops... Something went wrong. Please try again.", icon="🚨")
+
+  if st.button("Go Back"):
+    st.toast("Thanks for using the application. Hope you have a great day!", icon="👋")
+    time.sleep(2)
+    st.session_state.button_clicked = False
+    st.rerun()              
+              </code>
+            </pre>
+          </div>
+          <hr />
+
+          <div>
+            <h5 class="py-2"><b>Layout the application</b></h5>
+            <div class="row padd-15 rounded">
+              <img src="/static/images/streamlit_app.jpeg" alt="">
+            </div>
+          </div>
+          <hr />
+
+          <a href="https://online-payment-fraud-detector.streamlit.app/" class="btn btn-primary">
+            Start Application
+          </a>
+        </div>
+    </section>
+    <!-- App section ends -->
+
+    <!-- Resources section starts -->
+    <section class="service section" id="resources">
+      <div class="container">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2>Technical Resources</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="service-item padd-15">
+            <a href="https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html">
+              <div class="service-item-inner card" style="width: 33rem;">
+                <img src="static/images/others/handbook.png" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">Fraud Detection Handbook</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="service-item padd-15">
+            <a href="https://www.kaggle.com/code/avdhesh15/fraud-detection-model">
+              <div class="service-item-inner card" style="width: 33rem;">
+                <img src="static/images/notebook/notebook.png" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">Kaggle Notebook</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="service-item padd-15">
+            <a href="https://drive.google.com/file/d/1Z5zhaLDPJLgk8P6y3-KL8mNHwrYh8ggn/view?usp=sharing">
+              <div class="service-item-inner card" style="width: 33rem;">
+                <img src="static/images/others/img.jpg" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">Handwritten Notes</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="service-item padd-15">
+            <a href="https://medium.com/@mr.priyankmishra/a-realistic-approach-to-ieee-cis-fraud-detection-25faea54137">
+              <div class="service-item-inner card" style="width: 33rem;">
+                <img src="static/images/others/medium.png" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">Medium Blog</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="service-item padd-15">
+            <a href="https://www.kaggle.com/competitions/ieee-fraud-detection">
+              <div class="service-item-inner card" style="width: 33rem;">
+                <img src="static/images/others/ieee_cis_dataset.png" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">IEEE-CIS Dataset</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+    </section>
+    <!-- Resources section ends -->
+
+    <!-- Contact section starts -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-xl-center">
+          <div class="col-12 col-lg-7 padd-15">
+            <div class="row justify-content-xl-center">
+              <div class="col-12 col-xl-11">
+                <div class="bg-white border rounded shadow-sm overflow-hidden">
+
+                  <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="13abd56e-5cf2-4ad2-9a98-6b3e7d394be9">
+                    <div class="row gy-4 p-xl-5">
+                      <div class="col-12">
+                        <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-envelope" viewBox="0 0 16 16">
+                              <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                            </svg>
+                          </span>
+                          <input type="email" class="form-control" id="email" name="email" value="" required>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-telephone" viewBox="0 0 16 16">
+                              <path
+                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                          </span>
+                          <input type="tel" class="form-control" id="phone" name="phone" value="">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                      </div>
+                      <div class="col-12">
+                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                      </div>
+                      <div class="col-12">
+                        <div class="d-grid">
+                          <button class="btn btn-primary btn-lg" type="submit">Send
+                            Message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <img class="img-fluid rounded" loading="lazy" src="/static/favicon.png" alt="Get in Touch">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact section ends -->
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
+  <script src="./static/js/index.js"></script>
 </body>
 
 </html>
