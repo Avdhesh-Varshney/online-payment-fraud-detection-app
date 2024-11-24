@@ -1,38 +1,6 @@
-# <font color="gold">Online Payments Fraud Detection ML Model</font>
-
-![Fraud Detection](https://img.shields.io/badge/Fraud-Detection-brightgreen?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge)
-![XGBoost](https://img.shields.io/badge/-XGBoost-important?style=for-the-badge)
-![AUC ROC](https://img.shields.io/badge/AUC--ROC-0.9556-blue?style=for-the-badge)
-![License](https://img.shields.io/github/license/Avdhesh-Varshney/online-payment-fraud-detection-app?style=for-the-badge)
-
----
-
-## <font color="lavendar">Project Overview</font>
-
 The **Online Payments Fraud Detection** application is designed to predict fraudulent transactions in online payment systems using advanced machine learning techniques. With the growing risk of online payment fraud, this model helps financial institutions and e-commerce platforms identify suspicious transactions in real-time.
 
-Our solution leverages machine learning models, such as **XGBoost**, to detect fraudulent transactions based on a set of features that describe the transaction details. This project focuses on:
-- **Real-time fraud detection** by integrating machine learning models into the payment processing system.
-- **Interactive interface** for users to input transaction details and receive immediate feedback on transaction validity.
-- **Comprehensive feature engineering** and data reduction techniques to optimize model performance.
-
----
-
-## <font color="lavendar">Features</font>
-
-- **Fraud Detection Model**: Built with XGBoost and tuned using hyperparameter optimization to achieve an <font color="khaki">AUC ROC score of 0.9556</font>.
-- **Feature Reduction**: <font color="khaki">Dimensionality reduction from 394 to 53 features</font> for optimized performance.
-- **Interactive Web Application**: A user-friendly interface built with <font color="lightgreen">Streamlit</font> for real-time fraud prediction.
-- **Scalable**: Suitable for integration into <font color="plum">large-scale</font> online payment platforms.
-- **Visualization Tools**: Displays transaction analysis and prediction results in an intuitive format.
-- **Comprehensive Documentation**: Access detailed documentation about <font color="khaki">what has been done</font> through the links provided below.
-
----
-
-## <font color="lavendar">Usage</font>
-
-1. Open the web app by running the command below.
+Our solution leverages machine learning models, such 
    > <font color="red">https://online-payment-fraud-detector.streamlit.app/</font>
 
 2. Enter transaction details like:
