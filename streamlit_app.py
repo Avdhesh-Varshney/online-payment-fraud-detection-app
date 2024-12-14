@@ -586,7 +586,7 @@ def app():
     st.rerun()
 
 if __name__ == '__main__':
-  st.set_page_config(page_title="Online Payment Fraud Detection App", page_icon="./static/favicon.ico")
+  st.set_page_config(page_title="Online Payment Fraud Detection App", page_icon="https://github.com/user-attachments/assets/662c2283-a6c9-471a-a2cd-b4173c64cd54")
   
   if 'button_clicked' not in st.session_state:
     st.session_state.button_clicked = False
@@ -595,7 +595,7 @@ if __name__ == '__main__':
   with title:
     col1, col2 = st.columns([1, 7])
     with col1:
-      st.image('./static/favicon.png', width=100)
+      st.image('https://github.com/user-attachments/assets/662c2283-a6c9-471a-a2cd-b4173c64cd54', width=100)
     with col2:
       st.title("Payment Fraud Detection App")
   
