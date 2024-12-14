@@ -1,0 +1,80 @@
+site_name: Online Payment Fraud Detection System
+site_url: https://avdhesh-varshney.github.io/online-payment-fraud-detection-app/
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  logo: assets/favicon.png
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  features:
+    - navigation.sections
+    - navigation.footer
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+nav:
+  - Home: index.md
+  - About the Application:
+    - Overview: about.md
+    - Fraud Insights: fraud-insights.md
+    - Research and Journey: research-journey.md
+  - Model Development:
+    - Overview: model-overview.md
+    - Model Building: model-building.md
+  - Application Guide:
+    - Getting Started: getting-started.md
+    - How to Use: how-to-use.md
+  - Technical Resources: resources.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.blocks.caption
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://youtube.com/@Code_A2Z
+    - icon: simple/linkedin
+      link: https://linkedin.com/in/avdhesh-varshney/
+    - icon: simple/github
+      link: https://github.com/Avdhesh-Varshney
+  mermaid_config:
+    theme: "neutral"
+    fontFamily: "Arial, sans-serif"
+    securityLevel: "strict"
+
+copyright: Copyright &copy; 2024 Avdhesh Varshney
